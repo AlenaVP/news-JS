@@ -13,6 +13,11 @@ const baseConfig = {
                 test: /\.css$/i,
                 use: ['style-loader', 'css-loader'],
             },
+            {
+              test: /\.[tj]s$/,
+              use: 'ts-loader',
+              exclude: /node_modules/,
+            },
         ],
     },
     resolve: {
