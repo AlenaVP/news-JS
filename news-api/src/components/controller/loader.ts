@@ -1,5 +1,10 @@
+import { OptionAPI } from '../interface/OptionAPI';
+
 class Loader {
-    constructor(baseLink, options) {
+    constructor(
+        private baseLink: string,
+        private options: OptionAPI
+    ) {
         this.baseLink = baseLink;
         this.options = options;
     }

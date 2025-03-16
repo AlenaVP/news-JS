@@ -8,11 +8,11 @@ class News {
         const newsItemTemp = document.querySelector('#newsItemTemp');
 
         news.forEach((item, idx) => {
-            const newsClone = newsItemTemp.content.cloneNode(true);
+            const newsClone = <HTMLElement>(<HTMLTemplateElement>newsItemTemp).content.cloneNode(true);
 
             if (idx % 2) newsClone.querySelector('.news__item').classList.add('alt');
 
-            newsClone.querySelector('.news__meta-photo').style.backgroundImage = `url(${
+            (<HTMLElement>newsClone.querySelector('.news__meta-photo')).style.backgroundImage = `url(${
                 item.urlToImage || 'img/news_placeholder.jpg'
             })`;
             newsClone.querySelector('.news__meta-author').textContent = item.author || item.source.name;
