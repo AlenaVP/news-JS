@@ -1,6 +1,6 @@
 {
-    "name": "NewsJS",
-    "version": "1.3.0",
+    "name": "news-api",
+    "version": "2.0.0",
     "description": "",
     "main": "webpack.base.config.js",
     "scripts": {
